@@ -207,7 +207,7 @@
                     theR = b(1:(nz+2))*b(1:(nz+2))
                     theDC = b((nz+3):2*(nz+2))*b((nz+3):2*(nz+2))    
                     predTime2 = predtimerec2(1,1)    
-                    call survival(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
+                    call survival_frailty(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
                     survR(:,1) = surv(1)
                     hazR(:,1) = lam(1)
                     survDC(1) = surv(2)
@@ -217,13 +217,13 @@
                         predtime_cm(2) = predtimerec2(i,nrec0+2)    
                         do ii=1,nrec0
                             predTime2 = predtimerec2(i,ii+1)
-                            call survival(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
+                            call survival_frailty(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
                             survR(i,ii+1) = surv(1)
                             hazR(i,ii+1) = lam(1)
                         end do
                     end do
                     predTime2 = predtimerec2(1,nrec0+2)
-                    call survival(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
+                    call survival_frailty(predTime2,theR,theDC,nz+2,zi,surv,lam,nst)
                     survR(:,nrec0+2) = surv(1)
                     hazR(:,nrec0+2) = lam(1)
                     survDC(2) = surv(2)    
@@ -346,20 +346,20 @@
                             theRalea = balea(j,1:(nz+2))*balea(j,1:(nz+2))
                             theDCalea = balea(j,(nz+3):2*(nz+2))*balea(j,(nz+3):2*(nz+2))
                             predTime2 = predtimerec2(1,1)
-                            call survival(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
+                            call survival_frailty(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
                             survRalea(:,1) = surv(1)
                             hazRalea(:,1) = lam(1)
                             survDCalea(1) = surv(2)    
                             do i=1,npred0
                                 do ii=1,nrec0
                                     predTime2 = predtimerec2(i,ii+1)
-                                    call survival(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
+                                    call survival_frailty(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
                                     survRalea(i,ii+1) = surv(1)
                                     hazRalea(i,ii+1) = lam(1)
                                 end do
                             end do
                             predTime2 = predtimerec2(1,nrec0+2)
-                            call survival(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
+                            call survival_frailty(predTime2,theRalea,theDCalea,nz+2,zi,surv,lam,nst)
                             survRalea(:,nrec0+2) = surv(1)
                             hazRalea(:,nrec0+2) = lam(1)
                             survDCalea(2) = surv(2)    
