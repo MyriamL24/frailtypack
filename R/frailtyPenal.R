@@ -746,8 +746,9 @@
                       as.integer(betaorder),
                       as.integer(filtretps),
                       BetaTpsMat=as.double(matrix(0,nrow=101,ncol=1+4*nvartimedep)),
-                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv)),
-                      PACKAGE = "frailtypack") # 58 arguments
+                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv))
+					  )#,
+                      #PACKAGE = "frailtypack") # 58 arguments
       #AD:      
 		if (ans$istop == 4){
 			warning("Problem in the loglikelihood computation. The program stopped abnormally. Please verify your dataset. \n")
@@ -1570,8 +1571,9 @@
                       as.integer(c(filtretps,filtretps2)),
                       BetaTpsMat=as.double(matrix(0,nrow=101,ncol=1+4*nvartimedep)),
                       BetaTpsMatDc=as.double(matrix(0,nrow=101,ncol=1+4*nvartimedep2)),
-                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv)),
-                      PACKAGE = "frailtypack") # 65 arguments
+                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv))
+					  )#,
+                      #PACKAGE = "frailtypack") # 65 arguments
 					  
 		MartinGale <- matrix(ans$MartinGale,nrow=as.integer(length(uni.cluster)),ncol=5) 
 		
@@ -1961,8 +1963,9 @@
                       frailty.sd.group=as.double(rep(0,as.integer(length(uni.cluster)))),
                       frailty.sd.subgroup=as.double(matrix(0,nrow=ngg,ncol=maxng)),
                       linear.pred=as.double(rep(0,n)),
-                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv)),
-                      PACKAGE = "frailtypack") # 57 arguments
+                      EPS=as.double(c(LIMparam,LIMlogl,LIMderiv))
+					  )#,
+                      #PACKAGE = "frailtypack") # 57 arguments
       
 		if (ans$istop == 4){
 			warning("Problem in the loglikelihood computation. The program stopped abnormally. Please verify your dataset. \n")
@@ -2513,8 +2516,9 @@
 				as.integer(c(filtretps, filtretps2)),
 				BetaTpsMat = as.double(matrix(0,nrow=101, ncol=1+4*nvartimedep)),
 				BetaTpsMatDc = as.double(matrix(0,nrow=101, ncol=1+4*nvartimedep2)),
-				EPS = as.double(c(LIMparam, LIMlogl, LIMderiv)),
-				PACKAGE = "frailtypack") #65 arguments
+				EPS = as.double(c(LIMparam, LIMlogl, LIMderiv))
+				)#,
+				#PACKAGE = "frailtypack") #65 arguments
 		
 		###########################################
 		### Verification de l'execution du code ###

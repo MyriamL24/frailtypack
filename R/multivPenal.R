@@ -1167,8 +1167,9 @@ if(length(vec.factor) > 0){
 		
 		time=as.double(time),
 		timedc=as.double(timedc),
-		time2=as.double(time2),
-	PACKAGE = "frailtypack")#63 arguments
+		time2=as.double(time2)
+		)#,
+	# PACKAGE = "frailtypack")#63 arguments
 
 
 	if (ans$critCV[2] == 4){

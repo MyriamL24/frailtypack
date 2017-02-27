@@ -1395,8 +1395,9 @@ invBi_cholDet <- sapply(Bi_tmp,  det)
                     BetaTpsMatY = as.double(matrix(0,nrow=101,ncol=1+4*0)),# for future developments
                     EPS=as.double(c(LIMparam,LIMlogl,LIMderiv)),
                     GH = c(as.integer(GH),as.integer(n.nodes)),
-                    paGH = data.matrix(cbind(b_lme,invBi_cholDet,as.data.frame(invBi_chol))),
-                    PACKAGE = "frailtypack")
+                    paGH = data.matrix(cbind(b_lme,invBi_cholDet,as.data.frame(invBi_chol)))
+					)#,
+                    # PACKAGE = "frailtypack")
 
 
 

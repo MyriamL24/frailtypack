@@ -498,8 +498,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 				as.double(uppertime),
 				as.integer(moving.window),
 				as.double(timeAll),
-				as.integer(fit$logNormal),
-				PACKAGE = "frailtypack") #43 arguments
+				as.integer(fit$logNormal)
+				)#,
+				# PACKAGE = "frailtypack") #43 arguments
 				
 		# Myriam 18-08-2016 Fusion des fichiers predict et predict_logN
 		
@@ -852,8 +853,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 				as.integer(moving.window),
 				as.double(timeAll),
 				as.integer(s_cag_id),
-				as.double(s_cag),
-				PACKAGE = "frailtypack")#32 arguments
+				as.double(s_cag)
+				)#,
+				# PACKAGE = "frailtypack")#32 arguments
 
 			predMat <- matrix(ans$pred,nrow=nrow(data),ncol=ntimeAll)
 			predMatLow <- matrix(ans$predlow,nrow=nrow(data),ncol=ntimeAll)
@@ -931,8 +933,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 				as.integer(moving.window),
 				as.double(timeAll),
 				as.integer(s_cag_id),
-				as.double(s_cag),
-				PACKAGE = "frailtypack") #38 arguments
+				as.double(s_cag)
+				)#,
+				# PACKAGE = "frailtypack") #38 arguments
 				
 			out <- NULL
 			out$call <- match.call()
@@ -1066,8 +1069,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 						as.double(rep(0,nrow=npred0*MC.sample)),
 						as.double(rep(0,nrow=npred0*MC.sample)),
 						predlow1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll)),
-						predhigh1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll)),
-						PACKAGE = "frailtypack")#19 arguments
+						predhigh1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll))
+						)#,
+						# PACKAGE = "frailtypack")#19 arguments
  						
 					predMat <- matrix(ans$pred,nrow=npred0,ncol=ntimeAll)
 					
@@ -1109,8 +1113,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 							as.double(matrix(0,nrow=nrow(data)*MC.sample,ncol=ntimeAll)),
 							as.double(matrix(0,nrow=nrow(data)*MC.sample,ncol=ntimeAll)),
 							predlow1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll)),
-							predhigh1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll)),
-							PACKAGE = "frailtypack")	#14 arguments							
+							predhigh1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll))
+							)#,
+							# PACKAGE = "frailtypack")	#14 arguments							
 						predMat <- matrix(ans$pred,nrow=nrow(data),ncol=ntimeAll)
 					}
 				}				
@@ -1203,8 +1208,8 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 						as.double(zi),
 						survival=as.double(c(0,0)),
 						lam=as.double(c(0,0)),
-						as.integer(nst),# lam ajoute suite aux modif de survival
-						PACKAGE = "frailtypack") #8 arguments
+						as.integer(nst)#, lam ajoute suite aux modif de survival
+						)#PACKAGE = "frailtypack") #8 arguments
 						
 					if(ObjFrailty$n.strat == 2){
 						res <- c(res,out$survival)
@@ -1226,8 +1231,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 						as.integer(ObjFrailty$n.strat),
 						as.integer(ObjFrailty$nbintervR),
 						as.double(time),
-						survival=as.double(c(0,0)),
-						PACKAGE = "frailtypack"
+						survival=as.double(c(0,0))
+						)#,
+						# PACKAGE = "frailtypack"
 					) #6 arguments
 					
 					if(ObjFrailty$n.strat == 2){
@@ -1326,8 +1332,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 							as.double(mat.survival.LastRec.mc),
 							as.double(expBX.mc),
 							predlow1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll)),
-							predhigh1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll)),
-							PACKAGE = "frailtypack") #19 arguments
+							predhigh1=as.double(matrix(0,nrow=npred0,ncol=ntimeAll))
+							)#,
+							# PACKAGE = "frailtypack") #19 arguments
 							
 						predMatLow <- matrix(ans$predlow1,nrow=npred0,ncol=ntimeAll)
 						predMatHigh <- matrix(ans$predhigh1,nrow=npred0,ncol=ntimeAll)
@@ -1387,8 +1394,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 								as.double(mat.survival.X.horizon.mc),
 								as.double(expBX.mc),
 								predlow1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll)),
-								predhigh1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll)),
-								PACKAGE = "frailtypack")#15 arguments
+								predhigh1=as.double(matrix(0,nrow=nrow(data),ncol=ntimeAll))
+								)#,
+								# PACKAGE = "frailtypack")#15 arguments
 
 							predMatLow <- matrix(ans$predlow1,nrow=nrow(data),ncol=ntimeAll)
 							predMatHigh <- matrix(ans$predhigh1,nrow=nrow(data),ncol=ntimeAll)
@@ -1436,8 +1444,9 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 										frail.out=as.double(0),
 										as.double(sigma2.mc[i]),
 										as.double(res1),
-										as.integer(mi),
-										PACKAGE = "frailtypack" ) #5 arguments
+										as.integer(mi)
+										)#,
+										# PACKAGE = "frailtypack" ) #5 arguments
 									frailty.mc[i] <- res$frail.out
 								# }
 								pred <- 1-(vect.survival.X.horizon/vect.survival.X)**exp(frailty.mc[i])

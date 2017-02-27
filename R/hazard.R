@@ -33,7 +33,7 @@
 		}
 		
 		out <- .Fortran("risque2",as.double(t),as.double(the),as.integer(nz+2),
-		as.double(zi),risque=as.double(rep(0,nst)),as.integer(nst),PACKAGE = "frailtypack")
+		as.double(zi),risque=as.double(rep(0,nst)),as.integer(nst)) #,PACKAGE = "frailtypack")
 		
 		if(class(ObjFrailty) == "jointPenal"){
 			res <- c(res,out$risque)

@@ -400,8 +400,9 @@ epoce <- function(fit, pred.times, newdata = NULL, newdata.Longi = NULL){
                         rl_cond=as.double(rep(0,nt)),
                         epoir=as.double(rep(0,nt)),
                         contribt=as.double(rep(0,nt*nsujet)),
-                        atrisk=as.double(rep(0,nt)),
-                        PACKAGE="frailtypack")
+                        atrisk=as.double(rep(0,nt))
+						)#,
+                        # PACKAGE="frailtypack")
 }else{
 #  cat('logn...')
   ans <- .Fortran("cvpl_logn",
@@ -433,8 +434,9 @@ epoce <- function(fit, pred.times, newdata = NULL, newdata.Longi = NULL){
                   rl_cond=as.double(rep(0,nt)),
                   epoir=as.double(rep(0,nt)),
                   contribt=as.double(rep(0,nt*nsujet)),
-                  atrisk=as.double(rep(0,nt)),
-                  PACKAGE="frailtypack")
+                  atrisk=as.double(rep(0,nt))
+				  )#,
+                  # PACKAGE="frailtypack")
   }}else if(class(fit) == "longiPenal"){
 
    
@@ -476,8 +478,9 @@ epoce <- function(fit, pred.times, newdata = NULL, newdata.Longi = NULL){
                     rl_cond=as.double(rep(0,nt)),
                     epoir=as.double(rep(0,nt)),
                     contribt=as.double(rep(0,nt*nsujet)),
-                    atrisk=as.double(rep(0,nt)),
-                    PACKAGE="frailtypack")
+                    atrisk=as.double(rep(0,nt))
+					)#,
+                    # PACKAGE="frailtypack")
 
   }else if(class(fit) == "trivPenal"){
 
@@ -520,8 +523,9 @@ epoce <- function(fit, pred.times, newdata = NULL, newdata.Longi = NULL){
                     rl_cond=as.double(rep(0,nt)),
                     epoir=as.double(rep(0,nt)),
                     contribt=as.double(rep(0,nt*nsujet)),
-                    atrisk=as.double(rep(0,nt)),
-                    PACKAGE="frailtypack")
+                    atrisk=as.double(rep(0,nt))
+					)#,
+                    # PACKAGE="frailtypack")
 
   }
         out <- NULL
