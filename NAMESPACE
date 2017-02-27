@@ -1,4 +1,4 @@
-useDynLib(frailtypack, additive, joint, nested, frailpenal, joint_longi, cvpl, cvpl_logn, cvpl_long, risque2, joint_multiv, predict, predict_biv, predict_tri, predict_recurr_sha, predict_logn_sha, survival, survival_cpm, frailpred_sha_nor_mc, survival2, survivalj_cpm2, survival_cpm2)
+useDynLib(frailtypack, additive, joint, nested, frailpenal, joint_longi, cvpl, cvpl_logn, cvpl_long, risque2, joint_multiv, predict, predict_biv, predict_tri, predict_recurr_sha, predict_logn_sha, survival_frailty, survival_cpm, frailpred_sha_nor_mc, survival2, survivalj_cpm2, survival_cpm2)
 export(
 frailtyPenal,
 additivePenal,

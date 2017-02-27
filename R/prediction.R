@@ -1200,7 +1200,7 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 					res <- NULL
 					nst <- ObjFrailty$n.strat
 					
-					out <- .Fortran("survival",
+					out <- .Fortran("survival_frailty",
 						as.double(t),
 						as.double(para1),
 						as.double(para2),
