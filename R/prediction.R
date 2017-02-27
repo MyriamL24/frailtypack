@@ -1234,7 +1234,7 @@ prediction <- function(fit, data, data.Longi, t, window, event = "Both", conditi
 						survival=as.double(c(0,0))
 						)#,
 						# PACKAGE = "frailtypack"
-					) #6 arguments
+					 #6 arguments
 					
 					if(ObjFrailty$n.strat == 2){
 						res <- c(res,out$survival)
