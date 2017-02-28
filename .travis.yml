@@ -1,2 +1,8 @@
 language: R
 cache: packages
+
+env:
+  matrix:
+    - RVERSION=oldrel
+    - RVERSION=release
+- RVERSION=devel
